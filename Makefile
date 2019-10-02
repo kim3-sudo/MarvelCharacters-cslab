@@ -4,10 +4,10 @@
 USER= kim3
 
 # C++ compiler
-OBJS	= main.o charChar.o charNameMap.o charYearMap.o userOut.o
-SOURCE	= main.cpp charChar.cpp charNameMap.cpp charYearMap.cpp userOut.cpp
+OBJS	= marvel.o charChar.o charNameMap.o charYearMap.o userOut.o
+SOURCE	= marvel.cpp charChar.cpp charNameMap.cpp charYearMap.cpp userOut.cpp
 HEADER	= charChar.h charNameMap.h charYearMap.h includes.h userOut.h
-OUT	= main
+OUT	= marvel
 CC	 = g++
 FLAGS	 = -g -c -Wall
 LFLAGS	 = 
@@ -16,8 +16,8 @@ CFLAGS	= -std=c++14
 all: $(OBJS)
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
 
-main.o: main.cpp
-	$(CC) $(FLAGS) main.cpp -std=c++11
+marvel.o: marvel.cpp
+	$(CC) $(FLAGS) marvel.cpp -std=c++11
 
 charChar.o: charChar.cpp
 	$(CC) $(FLAGS) charChar.cpp -std=c++11
@@ -47,4 +47,4 @@ PutHTML:
 	ls -l /var/www/html/class/softdev/$(USER)/Names/
 
 clean:
-	rm -f *.o main
+	rm -f *.o marvel
