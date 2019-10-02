@@ -4,7 +4,8 @@
 #include "charNameMap.h"
 #include "charYearMap.h"
 
-const string fileName = "/home/class/SoftDev/marvel/marvel-wikia-data.csv";
+const string path = "/home/class/SoftDev/marvel/";
+const string fileName = "marvel-wikia-data.csv";
 
 vector<charChar> createCharacterList(string selectedName, charNameMap nameMap);
 vector<charChar> createCharacterList(string year, charYearMap yearMap);
